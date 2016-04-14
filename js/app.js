@@ -1,0 +1,1 @@
+angular.module('friendList', []); //empty array tells angular we're creating a new module.

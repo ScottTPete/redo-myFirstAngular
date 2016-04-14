@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="friendList">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Angular Basics</title>
+	<link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body ng-controller="mainCtrl">
+	
+	<div class="friendContainer">
+		<input type=text ng-model="friend" placeholder="Add a Friend"><button ng-click="addFriend(friend)">Add</button>
+		<p ng-repeat="friend in friends track by $index" class="friendName">{{friend}}
+		</p> <!--track by $index will allow angular to repeat over values that are the same-->
+	</div>
+	
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+	
+	<script src="js/app.js"></script>
+	<script src="js/controller/mainCtrl.js"></script>
+</body>
+
+</html>
